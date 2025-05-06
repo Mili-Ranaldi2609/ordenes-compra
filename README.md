@@ -18,8 +18,6 @@ Este proyecto es una API RESTful desarrollada con **NestJS**, **MongoDB Atlas** 
 ## 📦 Instalación y ejecución
 
 ### 1. Clonar el repositorio
-
-    ```bash
     git clone https://github.com/tu-usuario/ordenes-backend.git
     cd ordenes-backend
 ### 2. Instalar dependencias
@@ -48,8 +46,7 @@ Este proyecto es una API RESTful desarrollada con **NestJS**, **MongoDB Atlas** 
 - GET /orders
 
 - Query Params:
-
-      page (opcional) – número de página (default: 1)
+--- page (opcional) – número de página (default: 1)
       limit (opcional) – límite por página (default: 10)
       id_usuario (opcional) – filtra por usuario
 
