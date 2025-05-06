@@ -74,6 +74,8 @@ Al crear una orden, se publica automáticamente un evento en el tópico:
   "fecha_creacion": "2025-05-06T..."}</pre>
   
 🔹 Consumidor:
+
+--- 
 El sistema incluye un consumidor embebido que imprime en consola cualquier mensaje recibido en el tópico ordenes_creadas.
 
 
