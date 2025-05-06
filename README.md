@@ -64,6 +64,7 @@ Este proyecto es una API RESTful desarrollada con **NestJS**, **MongoDB Atlas** 
 ## 🔁 Kafka: integración de eventos
 Al crear una orden, se publica automáticamente un evento en el tópico:
 - ordenes_creadas
+---
 🔹 Mensaje publicado (ejemplo):
     <pre>{
   "_id": "...",
