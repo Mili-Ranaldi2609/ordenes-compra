@@ -70,9 +70,9 @@ Al crear una orden, se publica automáticamente un evento en el tópico:
   "id_usuario": "usuario3442",
   "items": [...],
   "total": 3010,
-  "fecha_creacion": "2025-05-06T..."
-}</pre>
+  "fecha_creacion": "2025-05-06T..."}</pre>
+  
 🔹 Consumidor:
-    El sistema incluye un consumidor embebido que imprime en consola cualquier mensaje recibido en el tópico ordenes_creadas.
+El sistema incluye un consumidor embebido que imprime en consola cualquier mensaje recibido en el tópico ordenes_creadas.
 
 
