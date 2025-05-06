@@ -78,4 +78,28 @@ Al crear una orden, se publica automáticamente un evento en el tópico:
 --- 
 El sistema incluye un consumidor embebido que imprime en consola cualquier mensaje recibido en el tópico ordenes_creadas.
 
+## 📂 Estructura del proyecto
+<pre>
+    /src
+  /orders
+    orders.controller.ts
+    orders.service.ts
+    orders.module.ts
+    dto/
+    schema/
+  /kafka
+    kafka.service.ts
+.env
+docker-compose.yml
+README.md
+</pre>
+## ✅ Funcionalidad implementada
+- Crear órdenes con validaciones
+- Listado paginado con filtros
+- Conexión a MongoDB Atlas
+- Publicación de mensajes en Kafka
+- Consumidor que escucha eventos
+## 📝 Notas
+- Para probar los mensajes, hay que asegurarse de tener Kafka corriendo (docker-compose up -d).
+- MongoDB Compass puede ayudar a visualizar las órdenes guardadas.
 
