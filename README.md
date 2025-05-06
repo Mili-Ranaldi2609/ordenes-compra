@@ -43,12 +43,16 @@ Este proyecto es una API RESTful desarrollada con **NestJS**, **MongoDB Atlas** 
 🔹 Respuesta esperada:
     <pre> { "_id": "6654f2347e4c1a...", "id_usuario": "usuario3442", "items": [ { "id_producto": "prod3", "cantidad": 3, "precio_unitario": 670, "_id": "..." } ], "total": 2010, "fecha_creacion": "2025-05-06T16:22:29.275Z", "__v": 0 } </pre>
 🔹 Obtener todas las órdenes
-- GET /orders
+    - GET /orders
 
-- Query Params:
---- page (opcional) – número de página (default: 1)
-      limit (opcional) – límite por página (default: 10)
-      id_usuario (opcional) – filtra por usuario
+🔹 Query Params:
+
+| Parámetro   | Tipo     | Opcional | Descripción                             |
+|-------------|----------|----------|-----------------------------------------|
+| page        | number   | Sí       | Número de página (default: 1)           |
+| limit       | number   | Sí       | Cantidad de elementos por página (10)   |
+| id_usuario  | string   | Sí       | Filtrar órdenes por ID de usuario       |
+
 
 - Ejemplo:
 
