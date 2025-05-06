@@ -40,7 +40,7 @@ Este proyecto es una API RESTful desarrollada con **NestJS**, **MongoDB Atlas** 
     { "id_producto": "prod3", "cantidad": 3, "precio_unitario": 670 },
     { "id_producto": "prod2", "cantidad": 1, "precio_unitario": 1000 }
       ]
--  Respuesta esperada:
+🔹 Respuesta esperada:
     <pre> { "_id": "6654f2347e4c1a...", "id_usuario": "usuario3442", "items": [ { "id_producto": "prod3", "cantidad": 3, "precio_unitario": 670, "_id": "..." } ], "total": 2010, "fecha_creacion": "2025-05-06T16:22:29.275Z", "__v": 0 } </pre>
 🔹 Obtener todas las órdenes
 - GET /orders
