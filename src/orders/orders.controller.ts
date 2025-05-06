@@ -7,7 +7,8 @@ import { Order } from './orders.interface';
 @Controller('orders')
 export class OrdersController {
     constructor(private readonly ordersService: OrdersService) { }
-    //get all de todas las ordenes 
+    // Endpoint: GET /orders
+    // Lista órdenes existentes con paginación y filtro opcional
     @Get()
     async findAll(
         @Query('page') page?: number,
@@ -18,7 +19,8 @@ export class OrdersController {
         const l = Number(limit) || 10;
         return this.ordersService.findAll(p, l, id_usuario);
     }
-    //endpoint que llama al service de la creacion de la orden compra
+    // Endpoint: POST /orders
+    // Crea una orden de compra con los datos recibidos en el body
     @Post()
     async create(@Body() createOrderDto: CreateOrderDto): Promise<Order> {
         return this.ordersService.create(createOrderDto);

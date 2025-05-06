@@ -1,5 +1,6 @@
 import { Schema } from 'mongoose';
-
+// Esquema de Mongoose para la entidad Orden
+// Incluye campos: id_usuario, items[], fecha_creacion y totalF
 export const OrderSchema = new Schema({
   id_usuario: { type: String, required: true },
   items: [{

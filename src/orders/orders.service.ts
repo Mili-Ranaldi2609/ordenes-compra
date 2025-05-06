@@ -11,7 +11,8 @@ export class OrdersService {
     @InjectModel('Order') private readonly orderModel: Model<Order>,
     private readonly kafkaService: KafkaService,
   ) { }
-  //get all de todas las ordenes
+
+  // Método para listar órdenes con paginación y filtro opcional por id_usuario
   async findAll(page = 1, limit = 10, id_usuario?: string): Promise<Order[]> {
     const skip = (page - 1) * limit;
 
@@ -28,12 +29,14 @@ export class OrdersService {
       .exec();
   }
 
-  //metodo asincrono para la creacion de una orden compra
+  // Método asincrónico para crear una nueva orden de compra
+  // Calcula el total, valida que haya ítems y guarda en MongoDB
   async create(createOrderDto: CreateOrderDto): Promise<Order> {
+    // Validación: la orden debe tener al menos un ítem
     if (!createOrderDto.items || createOrderDto.items.length === 0) {
       throw new BadRequestException('La orden debe contener al menos un ítem.');
     }
-
+    // Cálculo del total: suma de (cantidad * precio_unitario)
     const total = createOrderDto.items.reduce(
       (acc, item) => acc + item.cantidad * item.precio_unitario,
       0,
