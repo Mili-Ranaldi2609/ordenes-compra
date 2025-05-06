@@ -35,12 +35,13 @@ Este proyecto es una API RESTful desarrollada con **NestJS**, **MongoDB Atlas** 
 ## 📮 Endpoints
 🔹 Crear una orden
     - POST /orders:
+                   
     {
-  "id_usuario": "usuario3442",
-  "items": [
+      "id_usuario": "usuario3442",
+      "items": [
     { "id_producto": "prod3", "cantidad": 3, "precio_unitario": 670 },
     { "id_producto": "prod2", "cantidad": 1, "precio_unitario": 1000 }
-  ]
+      ]
 -  Respuesta esperada:
   {
   "_id": "...",
